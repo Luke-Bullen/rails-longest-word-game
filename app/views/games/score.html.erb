@@ -1,7 +1,12 @@
-
 <h1>Result</h1>
-<%= if @url   url[:found] == true %>
-  <p>Congrats! <%= params[:word] %> is a valid word</p>
-  <p>Sorr but <%= params[:word] %> isn't a valid word</p>
 
-<%= link_to 'Try a new word', 'new' %>
+<% if @included %>
+  <% if @english_word %>
+    <p>Congratulations! '<%= params[:input] %>' is a valid English word!</p>
+  <% else %>
+    <p>Sorry but '<%= params[:input] %>' does not seem to be a valid English word...</p>
+  <% end %>
+<% else %>
+  <p>Sorry but '<%= params[:input] %>' can't be built out of <%= @letters.join(", ") %></p>
+<% end %>
+<%= link_to "Play again", new_path %>

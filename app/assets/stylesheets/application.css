@@ -14,27 +14,22 @@
  *= require_self
  */
 
- .row {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  margin: 0 auto;
- }
 
-.block {
-  width: 20px;
-  height: 20px;
-  background-color: aqua;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin: 1rem; */
-  padding: 1rem;
-  border-radius: 5px;
-  /* text-align: center; */
-  font-size: larger;
+body {
+  padding: 0 20px;
 }
 
-.input {
-  margin-top: 5px;
+.letters {
+  padding-left: 0;
+  font-size: 24px;
+  list-style: none;
+  font-family: monospace;
+}
+
+.letters li {
+  background-color: #0d6efd;
+  color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 4px 12px;
+  display: inline;
 }
