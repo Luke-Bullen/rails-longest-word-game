@@ -1,0 +1,7 @@
+
+<h1>Result</h1>
+<%= if @url   url[:found] == true %>
+  <p>Congrats! <%= params[:word] %> is a valid word</p>
+  <p>Sorr but <%= params[:word] %> isn't a valid word</p>
+
+<%= link_to 'Try a new word', 'new' %>

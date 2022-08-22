@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ .row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+ }
+
+.block {
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 1rem; */
+  padding: 1rem;
+  border-radius: 5px;
+  /* text-align: center; */
+  font-size: larger;
+}
+
+.input {
+  margin-top: 5px;
+}
