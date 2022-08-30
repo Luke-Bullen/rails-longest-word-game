@@ -2,7 +2,6 @@ require "open-uri"
 
 class GamesController < ApplicationController
 
-
   def new
     vowel = ["A", "E", "I", "O", "U"]
     @letters = []

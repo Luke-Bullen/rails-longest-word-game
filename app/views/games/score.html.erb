@@ -2,11 +2,12 @@
 
 <% if @included %>
   <% if @english_word %>
-    <p>Congratulations! '<%= params[:input] %>' is a valid English word!</p>
+    <p>Congratulations! '<%= params[:input].capitalize %>' is a valid English word!</p>
+    <p>Score: <%= params[:input].length %></p>
   <% else %>
-    <p>Sorry but '<%= params[:input] %>' does not seem to be a valid English word...</p>
+    <p>Sorry but '<%= params[:input].capitalize %>' does not seem to be a valid English word...</p>
   <% end %>
 <% else %>
-  <p>Sorry but '<%= params[:input] %>' can't be built out of <%= @letters.join(", ") %></p>
+  <p>Sorry but '<%= params[:input].upcase %>' can't be built out of '<%= @letters.join(", ") %>'</p>
 <% end %>
 <%= link_to "Play again", new_path %>
